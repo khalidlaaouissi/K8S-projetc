@@ -18,3 +18,4 @@ replicas: 3
 selector:
     matchlabels:
         type: front-end
+        name: front-end
