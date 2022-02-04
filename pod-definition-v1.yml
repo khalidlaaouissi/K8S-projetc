@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: web-iot-isnow-pod
+   labels:
+     app: web-iot-isnow
+     tier: front-end
+spec:
+   containers:
+      - name: nginx-container
+        image: nginx

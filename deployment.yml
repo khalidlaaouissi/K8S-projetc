@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: web-iot-isnow-replicaset
+    type: front-end
+spec:
+   template:
+      metadata:
+         name: web-iot-isnow-pod
+         labels:
+           app: web-iot-isnow
+           tier: front-end
+      spec:
+        containers:
+         - name: nginx-container
+           image: nginx
+replicas: 3
+selector:
+    matchlabels:
+        type: front-end
+        name: front-end
